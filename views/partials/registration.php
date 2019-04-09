@@ -1,6 +1,19 @@
-<?php
-    include '../controllers/data/registration-handler.php';
-?>
+
+<?php require '../controllers/data/database.php'; ?>
+<?php include '../controllers/data/registration-handler.php';?>
+
+<?php foreach($messages['error'] as $_message): ?>
+    <div class="message--error">
+        <?= $_message ?>
+    </div>
+<?php endforeach; ?>
+
+<?php foreach($messages['success'] as $_message): ?>
+    <div class="message--success">
+        <?= $_message ?>
+    </div>
+<?php endforeach; ?>
+
 
 <form class="registration" action="#" method="post">
   
