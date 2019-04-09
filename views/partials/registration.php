@@ -1,3 +1,4 @@
+
 <?php require '../controllers/data/database.php'; ?>
 <?php include '../controllers/data/registration-handler.php';?>
 

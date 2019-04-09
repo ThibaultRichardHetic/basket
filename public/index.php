@@ -1,7 +1,7 @@
 <?php
 
 // Configuration 
-  define('URL', 'http://localhost:8888/cours/basket/public/');
+  define('URL', 'http://localhost/basket/public/');
 
 // GET 'q' param
 $q = empty($_GET['q']) ? '' : $_GET['q'];
@@ -10,9 +10,9 @@ $q = empty($_GET['q']) ? '' : $_GET['q'];
 // Define controller 
 $controller = '404';
 
-if($q == 'about-us')
+if($q == 'connexion')
 {
-  $controller = 'about';
+  $controller = 'connexion';
 }
 else if ($q == '') {
   $controller = 'home';

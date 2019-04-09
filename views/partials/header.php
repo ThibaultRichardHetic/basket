@@ -15,7 +15,7 @@
                 <a href="<?= URL ?>">Home</a>
             </li>
             <li>
-                <a href="<?= URL ?>about-us">About</a>
+                <a href="<?= URL ?>connexion">Connexion</a>
             </li>
         </ul>
     </header>
