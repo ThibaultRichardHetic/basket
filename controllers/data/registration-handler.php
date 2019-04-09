@@ -2,8 +2,8 @@
 
 // Error and success messages
 $messages = [
-    'error' => [],
-    'success' => [],
+  'error' => [],
+  'success' => [],
 ];
 
 // 
@@ -21,31 +21,31 @@ if(!empty($_POST))
   // Handle errors 
   if(empty($first_name))
   {
-      $messages['error'][] = 'Il manque votre prénom';
+    $messages['error'][] = 'Il manque votre prénom';
   }
   if(empty($last_name))
   {
-      $messages['error'][] = 'Il manque votre nom';
+    $messages['error'][] = 'Il manque votre nom';
   }
   if(empty($team_name))
   {
-      $messages['error'][] = "Il manque votre nom d'équipe";
+    $messages['error'][] = "Il manque votre nom d'équipe";
   }
   if(empty($mail))
   {
-      $messages['error'][] = "Il manque votre adresse mail";
+    $messages['error'][] = "Il manque votre adresse mail";
   }
   if(empty($password))
   {
-      $messages['error'][] = 'Mot de passe manquant';
+    $messages['error'][] = 'Mot de passe manquant';
   }
   elseif (strlen($password) < 5) 
   {
-      $messages['error'][] = 'Votre mot de passe est trop court';
+    $messages['error'][] = 'Votre mot de passe est trop court';
   }
   if(empty($password_confirmation))
   {
-      $messages['error'][] = "Votre confirmation de mot de passe est vide";
+    $messages['error'][] = "Votre confirmation de mot de passe est vide";
   }
 
   if( (!empty($password) && !empty($password_confirmation)) && ($password === $password_confirmation) )

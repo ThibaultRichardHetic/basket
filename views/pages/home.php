@@ -3,6 +3,5 @@
 <h1>Home</h1>
 
 
-<?php include '../views/partials/registration.php' ?>
 
 <?php include '../views/partials/footer.php' ?>

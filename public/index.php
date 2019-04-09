@@ -10,9 +10,9 @@ $q = empty($_GET['q']) ? '' : $_GET['q'];
 // Define controller 
 $controller = '404';
 
-if($q == 'about-us')
+if($q == 'connexion')
 {
-  $controller = 'about';
+  $controller = 'connexion';
 }
 else if ($q == '') {
   $controller = 'home';
