@@ -6,8 +6,9 @@ $messages = [
   'success' => [],
 ];
 
+
 // 
-if(!empty($_POST))
+if(!empty($_POST) && isset($_POST['register_submit']))
 {
 
   // Get variable
@@ -35,6 +36,13 @@ if(!empty($_POST))
   {
     $messages['error'][] = "Il manque votre adresse mail";
   }
+  elseif (!empty($mail)) {
+    foreach ($users as $_user) {
+      if ($mail === ($_user->mail)) {
+        $messages['error'][] = "Cette adresse mail est déjà utilisée";
+      }
+    }
+  }
   if(empty($password))
   {
     $messages['error'][] = 'Mot de passe manquant';
@@ -48,10 +56,7 @@ if(!empty($_POST))
     $messages['error'][] = "Votre confirmation de mot de passe est vide";
   }
 
-  if( (!empty($password) && !empty($password_confirmation)) && ($password === $password_confirmation) )
-  {
-    $messages['success'][] = 'Mot de passe identique a la vérification';
-  }
+
 
   if ( (!empty($password) && !empty($password_confirmation)) && ($password !== $password_confirmation) ) 
   {
@@ -60,7 +65,7 @@ if(!empty($_POST))
 
 
   // Success
-  if(empty($messages['error']))
+  if((empty($messages['error'])) && ( (!empty($password) && !empty($password_confirmation)) && ($password === $password_confirmation)))
   {
     $prepare = $pdo->prepare('INSERT INTO users (first_name, last_name, team_name, mail, password) VALUES (:first_name, :last_name, :team_name, :mail, :password)');
 
@@ -83,6 +88,60 @@ if(!empty($_POST))
   }
 }
 
+if (!empty($_POST) && ($_POST['connexion_submit'])) {
+
+
+  // Get variable
+  $connexion_mail = trim($_POST['connexion_mail']);
+  $connexion_password = $_POST['connexion_password'];
+
+  // Handle errors 
+  if(empty($connexion_mail))
+  {
+    $messages['error'][] = 'Il manque votre mail utilisateur';
+  }
+  
+  if(empty($connexion_password))
+  {
+    $messages['error'][] = 'Il manque votre mot de passe';
+  }
+
+  // Success
+  if ( (empty($messages['error'])) ) {
+    
+    foreach ($users as $_user) {
+      if ( ($connexion_mail === ($_user->mail)) && ($connexion_password === ($_user->password)) ) {
+        $messages['success'][] = "vous pouvez rentrer";
+      }
+    }
+
+    if (empty($messages['success'])) {
+      $messages['error'][] = 'L adresse email ou le mot de passe est incorrect';
+    }
+    
+    else
+    {
+      $_POST['first_name'] = '';
+      $_POST['last_name'] = '';
+      $_POST['team_name'] = '';
+      $_POST['mail'] = '';
+      $_POST['password'] = '';
+      $_POST['password_confirmation'] = '';
+    }
+  }
+
+  else
+  {
+    $_POST['first_name'] = '';
+    $_POST['last_name'] = '';
+    $_POST['team_name'] = '';
+    $_POST['mail'] = '';
+    $_POST['password'] = '';
+    $_POST['password_confirmation'] = '';
+  }
+
+}
+
 // Form not sent 
 else 
 {
@@ -92,4 +151,7 @@ else
   $_POST['mail'] = '';
   $_POST['password'] = '';
   $_POST['password_confirmation'] = '';
+
+  $_POST['connexion_mail'] = '';
+  $_POST['connexion_password'] = '';
 }

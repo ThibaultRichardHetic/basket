@@ -1,5 +1,6 @@
 
 <?php require '../controllers/data/database.php'; ?>
+<?php require '../controllers/data/get-user-info.php'; ?>
 <?php include '../controllers/data/registration-handler.php';?>
 
 <?php foreach($messages['error'] as $_message): ?>
@@ -55,7 +56,25 @@
 
   <!-- submit -->
   <div class="field">
-    <input type="submit">
+    <input type="submit" name="register_submit">
   </div>
 
+</form>
+
+
+<!-- connexion -->
+<form action="#" method="post">
+  <div class="field">
+    <label for="connexion_mail">Adresse mail</label>
+    <input type="text" name="connexion_mail" value="<?= $_POST['connexion_mail']?>">
+  </div>
+  
+  <div class="field">
+    <label for="connexion_password">Mot de passe</label>
+    <input type="password" name="connexion_password" value="<?= $_POST['connexion_password']?>">
+  </div>
+
+  <div class="field">
+    <input type="submit"  name="connexion_submit">
+  </div>
 </form>

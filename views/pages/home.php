@@ -5,3 +5,5 @@
 
 
 <?php include '../views/partials/footer.php' ?>
+
+<?php include '../views/partials/test.php' ?>
