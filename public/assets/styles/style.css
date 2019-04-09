@@ -1,4 +1,40 @@
-* {
-  color: purple; }
+:root {
+  --color-primary: #051A6C;
+  --color-secondary: #31A6FF;
+  --color-text: #1E1E1E;
+  --typo--title: 'Cooper Hewitt', Heavy;
+  --typo--current: 'Nunito', Regular; }
+
+.body--home .header {
+  position: relative;
+  background-color: var(--color-primary);
+  height: 10vh; }
+  .body--home .header .nav {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+    .body--home .header .nav .container--logo .link--logo .logo {
+      width: 90px; }
+    .body--home .header .nav .container--list .list {
+      color: #fff;
+      display: flex;
+      flex-direction: row; }
+.body--home .main .section--1 {
+  height: 90vh;
+  background-image: url(../images/home-basket-bg.png); }
+  .body--home .main .section--1 .container .container--button {
+    background-color: var(--color-secondary); }
+    .body--home .main .section--1 .container .container--button .button__text {
+      color: var(--color-text); }
+.body--home .main .section--2 .container--articles {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between; }
+  .body--home .main .section--2 .container--articles .article {
+    position: relative;
+    width: 30%; }
 
 /*# sourceMappingURL=style.css.map */

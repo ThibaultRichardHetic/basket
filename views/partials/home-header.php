@@ -10,17 +10,21 @@
 </head>
 <body class="body--home">
   <header class="header">
-    <nav>
-      <div>
+    <nav class="nav">
+      <div class="container--logo">
       <!-- rediriger vers la home  -->
-      <a href=""> 
+      <a class="link--logo" href=""> 
         <img class="logo" src="assets/images/logo.png" alt="logo Alley oop">
       </a>
       </div>
-      <div>
-        <ul>
-          <li>Connexion</li>
-          <li>Inscription</li>
+      <div class="container--list">
+        <ul class="list">
+          <a class="link--li" href="">
+            <li class="li">Connexion</li>
+          </a>
+          <a class="link--li" href="">
+            <li class="li">Inscription</li>
+          </a>
         </ul>
       </div>
     </nav>

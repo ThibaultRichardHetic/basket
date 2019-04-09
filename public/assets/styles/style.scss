@@ -1,3 +1,112 @@
-*{
-  color: purple;
+:root
+{
+  --color-primary: #051A6C;
+  --color-secondary: #31A6FF;
+  --color-text: #1E1E1E;
+  
+  --typo--title: 'Cooper Hewitt', Heavy; 
+  --typo--current: 'Nunito', Regular; 
+
+}
+
+
+.body--home
+{
+  .header
+  {
+    position: relative;
+    background-color: var(--color-primary);
+    height: 10vh;
+    .nav
+    {
+      width: 80%;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center; // 
+      .container--logo
+      {
+        .link--logo
+        {
+          .logo
+          {
+            width: 90px;
+          }
+        }
+      }
+      .container--list
+      {
+        .list
+        {
+          color: #fff;
+          display: flex;
+          flex-direction: row;
+          .link--li
+          {
+            .li
+            {
+
+            }
+          }
+        }
+      }
+    }
+  }
+  .main
+  {
+    .section--1
+    {
+      height: 90vh;
+      background-image: url(../images/home-basket-bg.png);
+      .container
+      {
+        .container--text
+        {
+          .title
+          {
+
+          }
+          .text
+          {
+
+          }
+        }
+        .container--button
+        {
+          background-color: var(--color-secondary);
+          .button__text
+          {
+            color: var(--color-text);
+          }
+        }
+      }
+    }
+    .section--2
+    {
+      .container--articles
+      {
+        width: 80%;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        .article
+        {
+          position: relative;
+          width: 30%;
+          .icon
+          {
+
+          }
+          .title
+          {
+
+          }
+          .text
+          {
+
+          }
+        }
+      }
+    }
+  }
 }
