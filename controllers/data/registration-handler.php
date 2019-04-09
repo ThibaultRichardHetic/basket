@@ -88,7 +88,7 @@ if(!empty($_POST) && isset($_POST['register_submit']))
   }
 }
 
-if (!empty($_POST) && ($_POST['connexion_submit'])) {
+if (!empty($_POST) && isset($_POST['connexion_submit'])) {
 
 
   // Get variable
@@ -117,6 +117,13 @@ if (!empty($_POST) && ($_POST['connexion_submit'])) {
 
     if (empty($messages['success'])) {
       $messages['error'][] = 'L adresse email ou le mot de passe est incorrect';
+
+      $_POST['first_name'] = '';
+      $_POST['last_name'] = '';
+      $_POST['team_name'] = '';
+      $_POST['mail'] = '';
+      $_POST['password'] = '';
+      $_POST['password_confirmation'] = '';
     }
     
     else
