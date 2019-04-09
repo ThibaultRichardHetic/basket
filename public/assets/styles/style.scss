@@ -3,10 +3,34 @@
   --color-primary: #051A6C;
   --color-secondary: #31A6FF;
   --color-text: #1E1E1E;
-  
-  --typo--title: 'Cooper Hewitt', Heavy; 
-  --typo--current: 'Nunito', Regular; 
+  --color-text-2: #fff;
 
+  @font-face 
+  {
+    font-family: cooperHewittHeavy;
+    src: url(../fonts/cooper-hewitt-heavy.otf);
+  }
+
+  @font-face 
+  {
+    font-family: nunitoRegular;
+    src: url(../fonts/nunito-regular.ttf);
+  }
+  
+  --typo--title: cooperHewittHeavy; 
+  --typo--current: nunitoRegular; 
+
+  font-family: nunitoRegular;
+
+
+  font-size: 62.5%; // 1rem = 10px
+
+  --font-size-1: 4.7rem; 
+  --font-size-2: 3.8rem; 
+  --font-size-3: 3.2rem; 
+  --font-size-4: 2.6rem; 
+  --font-size-5: 2.1rem; 
+  --font-size-6: 1.7rem; 
 }
 
 
@@ -17,13 +41,15 @@
     position: relative;
     background-color: var(--color-primary);
     height: 10vh;
+    display: flex;
+    align-items: center; 
     .nav
     {
       width: 80%;
       margin: auto;
       display: flex;
       justify-content: space-between;
-      align-items: center; // 
+      align-items: center;
       .container--logo
       {
         .link--logo
@@ -38,14 +64,15 @@
       {
         .list
         {
-          color: #fff;
+          color: var(--color-text-2);
           display: flex;
           flex-direction: row;
+          font-size: var(--font-size-6);
           .link--li
           {
             .li
             {
-
+              margin-left: 30px;
             }
           }
         }
@@ -62,29 +89,32 @@
       {
         .container--text
         {
+          padding-top: 30vh;
+          padding-bottom: 15vh;
+          color: var(--color-text-2);
+          text-align: center;
+          width: 30%;
+          margin: auto;
           .title
           {
-
+            font-size: var(--font-size-1);
+            margin-bottom: 20px;
           }
           .text
           {
-
-          }
-        }
-        .container--button
-        {
-          background-color: var(--color-secondary);
-          .button__text
-          {
-            color: var(--color-text);
+            font-size: var(--font-size-3);
+            line-height: calc(1.2 * var(--font-size-3));
           }
         }
       }
     }
     .section--2
     {
+      height: 90vh;
       .container--articles
       {
+        padding-top: 15vh;
+        padding-bottom: 15vh;
         width: 80%;
         margin: auto;
         display: flex;
@@ -93,19 +123,62 @@
         {
           position: relative;
           width: 30%;
-          .icon
+          color: var(--color-text);
+          text-align: center;
+          .container--icon
           {
-
+            height: 15vh;
+            .icon
+            {
+              width: 64px;
+            }
           }
           .title
           {
-
+            margin-bottom: 40px;
+            font-size: var(--font-size-4);
           }
           .text
           {
-
+            font-size: var(--font-size-5);
+            line-height: calc(1.2 * var(--font-size-5));
           }
         }
+      }
+    }
+    .container--button
+    {
+      background-color: var(--color-secondary);
+      width: 190px;
+      height: 50px;
+      margin: auto;
+      position: relative;
+      border-radius: 3px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .button__text
+      {
+        color: var(--color-text);
+        font-size: var(--font-size-6);
+      }
+    }
+  }
+  .footer
+  {
+    background-color: var(--color-primary);
+    height: 20vh;
+    color: var(--color-text-2);
+    font-size: var(--font-size-6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    .container--text
+    {
+      .text
+      {
+        margin-bottom: 20px;
       }
     }
   }
