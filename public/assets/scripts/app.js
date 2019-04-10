@@ -1,19 +1,18 @@
-console.log('all good man')
-
 const $input = document.querySelectorAll("[class*='js-input']")
 
-console.log($input)
-
-// [class*='-js-input']
+const $label = document.querySelectorAll("[class*='js-label']")
 
 
-document.querySelector('.main--connexion .section--2').addEventListener('click', () =>
-{
-  for (let i = 0; i < $input.length; i++) {
-    if ($input[i].hasFocus())
-    {
-      console.log($input[i])
+for (let i = 0; i < $input.length; i++) {
+  $input[i].addEventListener('focus', () =>
+  {
+    $label[i].classList.add('label--focus')
+  })
+
+  $input[i].addEventListener('focusout', () =>
+  {
+    if ($input[i].value == '') {
+      $label[i].classList.remove('label--focus')
     }
-    
-  }
-})
+  })
+}

@@ -1,32 +1,33 @@
 @charset "UTF-8";
+@font-face {
+  font-family: 'cooperHewittHeavy';
+  src: url(../fonts/cooper-hewitt-heavy.otf); }
+@font-face {
+  font-family: 'nunitoRegular';
+  src: url(../fonts/nunito-regular.ttf); }
 :root {
   --color-primary: #051A6C;
   --color-secondary: #31A6FF;
   --color-text: #1E1E1E;
   --color-text-2: #fff;
-  --typo--title: cooperHewittHeavy;
-  --typo--current: nunitoRegular;
-  font-family: nunitoRegular;
   font-size: 62.5%;
   --font-size-1: 4.7rem;
   --font-size-2: 3.8rem;
   --font-size-3: 3.2rem;
   --font-size-4: 2.6rem;
   --font-size-5: 2.1rem;
-  --font-size-6: 1.7rem; }
-@font-face {
-  :root {
-    font-family: cooperHewittHeavy;
-    src: url(../fonts/cooper-hewitt-heavy.otf); } }
-@font-face {
-  :root {
-    font-family: nunitoRegular;
-    src: url(../fonts/nunito-regular.ttf); } }
+  --font-size-6: 1.7rem;
+  --typo-title: cooperHewittHeavy;
+  --typo-current: nunitoRegular; }
+
 .body {
   /*
   *
   ** page de connexion début
   *
+  */
+  /*
+  ** page de ligue début
   */ }
   .body .header {
     position: relative;
@@ -48,6 +49,7 @@
         flex-direction: row;
         font-size: var(--font-size-6); }
         .body .header .nav .container--list .list .link--li .li {
+          font-family: var(--typo-current);
           margin-left: 30px; }
   .body .main--home .section--1 {
     height: 90vh;
@@ -60,13 +62,16 @@
       width: 30%;
       margin: auto; }
       .body .main--home .section--1 .container .container--text .title {
+        font-family: var(--typo-title);
         font-size: var(--font-size-1);
         margin-bottom: 20px; }
       .body .main--home .section--1 .container .container--text .text {
         font-size: var(--font-size-3);
+        font-family: var(--typo-current);
         line-height: calc(1.2 * var(--font-size-3)); }
   .body .main--home .section--2 {
-    height: 90vh; }
+    height: 90vh;
+    font-family: var(--typo-current); }
     .body .main--home .section--2 .container--articles {
       padding-top: 15vh;
       padding-bottom: 15vh;
@@ -101,7 +106,8 @@
     align-items: center; }
     .body .main--home .container--button .button__text {
       color: var(--color-text);
-      font-size: var(--font-size-6); }
+      font-size: var(--font-size-6);
+      font-family: var(--typo-current); }
   .body .footer {
     background-color: var(--color-primary);
     height: 20vh;
@@ -110,7 +116,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    text-align: center; }
+    text-align: center;
+    font-family: var(--typo-current); }
     .body .footer .container--text .text {
       margin-bottom: 20px; }
   .body .main--connexion .section--1 {
@@ -121,7 +128,8 @@
     align-items: center; }
     .body .main--connexion .section--1 .container .title {
       font-size: var(--font-size-1);
-      color: var(--color-text-2); }
+      color: var(--color-text-2);
+      font-family: var(--typo-title); }
   .body .main--connexion .section--2 {
     position: relative;
     width: 80%;
@@ -135,16 +143,23 @@
       .body .main--connexion .section--2 .container--form .title--form {
         color: var(--color-primary);
         font-size: var(--font-size-4);
-        margin-bottom: 40px; }
+        margin-bottom: 40px;
+        font-family: var(--typo-title); }
       .body .main--connexion .section--2 .container--form .field {
         position: relative;
-        margin-bottom: 24px; }
+        margin-bottom: 24px;
+        font-family: var(--typo-current); }
         .body .main--connexion .section--2 .container--form .field label {
           color: #696969;
           position: absolute;
           font-size: var(--font-size-6);
           top: calc(50% - (var(--font-size-6)/ 2));
-          left: 35px; }
+          left: 35px;
+          transition: all 0.3s; }
+        .body .main--connexion .section--2 .container--form .field .label--focus {
+          top: calc(10%);
+          font-size: 14px;
+          transition: all 0.3s; }
         .body .main--connexion .section--2 .container--form .field .input {
           background-color: #F3F5FA;
           height: 70px;
@@ -166,5 +181,15 @@
       justify-content: space-between; }
       .body .main--connexion .section--2 .container--inscription .registration .container--name .field {
         width: 45%; }
+  .body .main--ligue .section--1 {
+    height: 30vh;
+    background-image: url(../images/inscription-basket-bg.png);
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .body .main--ligue .section--1 .container .title {
+      font-size: var(--font-size-1);
+      color: var(--color-text-2);
+      font-family: var(--typo-title); }
 
 /*# sourceMappingURL=style.css.map */

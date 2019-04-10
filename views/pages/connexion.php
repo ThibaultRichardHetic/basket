@@ -11,7 +11,6 @@
     </div>
   </section>
 
-
   <section class="section--2">
     <div class="container--form container--inscription">
       <h4 class="title--form">Inscription</h4>
@@ -19,33 +18,33 @@
         <div class="container--name">
             <!-- firs_name -->
           <div class="field">
-            <label for="first_name">Prénom</label>
+            <label class="js-label-1" for="first_name">Prénom</label>
             <input class="input js-input-1" type="text" name="first_name" value="<?= $_POST['first_name']?>">
           </div>
           <!-- last_name -->
           <div class="field">
-            <label for="last_name">Nom</label>
+            <label class="js-label-2" for="last_name">Nom</label>
             <input class="input js-input-2" type="text" name="last_name" value="<?= $_POST['last_name']?>">
           </div>
         </div> 
         <!-- team_name -->
         <div class="field">
-          <label for="team_name">Nom d'équipe</label>
+          <label class="js-label-3" for="team_name">Nom d'équipe</label>
           <input class="input js-input-3" type="text" name="team_name" value="<?= $_POST['team_name']?>">
         </div>
         <!-- mail -->
         <div class="field">
-          <label for="mail">Adresse mail</label>
+          <label class="js-label-4" for="mail">Adresse mail</label>
           <input class="input js-input-4" type="mail" name="mail" value="<?= $_POST['mail']?>">
         </div>
         <!-- password -->
         <div class="field">
-          <label for="password">Mot de passe</label>
+          <label  class="js-label-5" for="password">Mot de passe</label>
           <input class="input js-input-5" type="password" name="password" value="<?= $_POST['password']?>">
         </div>
         <!-- password_confirmation  -->
         <div class="field">
-          <label for="password_confirmation">Confiration de votre mot de passe</label>
+          <label class="js-label-6" for="password_confirmation">Confiration de votre mot de passe</label>
           <input class="input js-input-6" type="password" name="password_confirmation" value="<?= $_POST['password_confirmation']?>">
         </div>
         <!-- submit -->
@@ -58,12 +57,12 @@
       <h4 class="title--form">Connexion</h4>
       <form action="#" method="post">
         <div class="field">
-          <label for="connexion_mail">Adresse mail</label>
+          <label  class="js-label-7" for="connexion_mail">Adresse mail</label>
           <input class="input js-input-7" type="text" name="connexion_mail" value="<?= $_POST['connexion_mail']?>">
         </div>
         
         <div class="field">
-          <label for="connexion_password">Mot de passe</label>
+          <label  class="js-label-8" for="connexion_password">Mot de passe</label>
           <input class="input js-input-8" type="password" name="connexion_password" value="<?= $_POST['connexion_password']?>">
         </div>
 

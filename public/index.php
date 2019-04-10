@@ -14,12 +14,12 @@ if($q == 'connexion')
 {
   $controller = 'connexion';
 }
+else if($q == 'ligue')
+{
+  $controller = 'league';
+}
 else if ($q == '') {
   $controller = 'home';
-}
-else if (preg_match('/^article\/[1-9][0-9]*$/', $q))
-{
-  $controller = 'article';
 }
 
 // Include controller
