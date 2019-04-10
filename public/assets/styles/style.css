@@ -47,6 +47,14 @@
       .body .header .nav .container--list .list .link--li .li {
         font-family: var(--typo-current);
         margin-left: 30px; }
+    .body .header .nav .container--title .title {
+      color: var(--color-text-2);
+      font-size: var(--font-size-2);
+      font-family: var(--typo-title); }
+    .body .header .nav .container--profile .profile__name {
+      color: var(--color-text-2);
+      font-size: var(--font-size-6);
+      font-family: var(--typo-current); }
 .body .container--form {
   width: 40%; }
   .body .container--form .title--form {
@@ -178,6 +186,17 @@
       font-size: var(--font-size-1);
       color: var(--color-text-2);
       font-family: var(--typo-title); }
+  .body .main--connexion .container--message {
+    padding-top: 50px;
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    font-size: var(--font-size-5);
+    font-family: var(--typo-current); }
+    .body .main--connexion .container--message .message--error {
+      color: red; }
+    .body .main--connexion .container--message .message--success {
+      color: green; }
   .body .main--connexion .section--2 {
     position: relative;
     width: 80%;
@@ -228,5 +247,15 @@
         width: 400px;
         height: 600px;
         background-image: url(../images/ligue-basket-bg.png); }
+  .body .main--board .section--1 {
+    height: 30vh;
+    background-image: url(../images/coach.png);
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .body .main--board .section--1 .container .title {
+      font-size: var(--font-size-1);
+      color: var(--color-text-2);
+      font-family: var(--typo-title); }
 
 /*# sourceMappingURL=style.css.map */

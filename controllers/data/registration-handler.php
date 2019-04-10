@@ -23,6 +23,7 @@ if(!empty($_POST) && isset($_POST['register_submit']))
   if(empty($first_name))
   {
     $messages['error'][] = 'Il manque votre prénom';
+    $_POST['first_name'] = 'Il manque votre prénom';
   }
   if(empty($last_name))
   {
@@ -56,13 +57,10 @@ if(!empty($_POST) && isset($_POST['register_submit']))
     $messages['error'][] = "Votre confirmation de mot de passe est vide";
   }
 
-
-
   if ( (!empty($password) && !empty($password_confirmation)) && ($password !== $password_confirmation) ) 
   {
     $messages['error'][] = "Vérification du mot de passe invalide";
   }
-
 
   // Success
   if((empty($messages['error'])) && ( (!empty($password) && !empty($password_confirmation)) && ($password === $password_confirmation)))
@@ -78,6 +76,9 @@ if(!empty($_POST) && isset($_POST['register_submit']))
     $prepare->execute();
 
     $messages['success'][] = 'Vous êtes bien enregistré(e)';
+
+    $mail_user = $mail;
+    global $mail_user;
 
     $_POST['first_name'] = '';
     $_POST['last_name'] = '';
@@ -108,10 +109,15 @@ if (!empty($_POST) && isset($_POST['connexion_submit'])) {
 
   // Success
   if ( (empty($messages['error'])) ) {
+
     
     foreach ($users as $_user) {
       if ( ($connexion_mail === ($_user->mail)) && ($connexion_password === ($_user->password)) ) {
         $messages['success'][] = "vous pouvez rentrer";
+        $_SESSION['id'] = $_user->id;
+        $_SESSION['mail'] = $_user->mail;
+        header('Location:../public/tableau');
+        exit();
       }
     }
 

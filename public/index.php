@@ -3,6 +3,9 @@
 // Configuration 
   define('URL', 'http://localhost:8888/cours/basket/public/');
 
+session_start();
+
+
 // GET 'q' param
 $q = empty($_GET['q']) ? '' : $_GET['q'];
 
@@ -17,6 +20,10 @@ if($q == 'connexion')
 else if($q == 'ligue')
 {
   $controller = 'league';
+}
+else if($q == 'tableau')
+{
+  $controller = 'board';
 }
 else if ($q == '') {
   $controller = 'home';

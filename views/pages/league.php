@@ -28,6 +28,9 @@
           <div class="button--add">
             <p class="text">+ Ajouter un ami</p>
           </div>
+          <div class="field">
+          <input class="submit" type="submit"  name="creation_submit" value="Créer">
+        </div>
         </form>
       </div>
       <div class="container--illu">
