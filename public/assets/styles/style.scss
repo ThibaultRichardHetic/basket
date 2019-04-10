@@ -34,7 +34,7 @@
 }
 
 
-.body--home
+.body
 {
   .header
   {
@@ -79,7 +79,7 @@
       }
     }
   }
-  .main
+  .main--home
   {
     .section--1
     {
@@ -182,4 +182,99 @@
       }
     }
   }
+  /*
+  *
+  ** page de connexion début
+  *
+  */
+  .main--connexion
+  {
+    .section--1
+    {
+      height: 30vh;
+      background-image: url(../images/inscription-basket-bg.png);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .container
+      {
+        .title
+        {
+          font-size: var(--font-size-1);
+          color: var(--color-text-2);
+        }
+      }
+    }
+    .section--2
+    {
+      position: relative;
+      width: 80%;
+      margin: auto;
+      margin-top: 70px; 
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 100px;
+      .container--form
+      {
+        width: 40%;
+        .title--form
+        {
+          color: var(--color-primary);
+          font-size: var(--font-size-4);
+          margin-bottom: 40px;
+        }
+        .field
+        {
+          position: relative;
+          margin-bottom: 24px;
+          label
+          {
+            color: #696969;
+            position: absolute;
+            font-size: var(--font-size-6);
+            top: calc(50% - (var(--font-size-6)/ 2));
+            left: 35px;
+          }
+          .input
+          {
+            background-color: #F3F5FA;
+            height: 70px;
+            color: var(--color-text);
+            font-size: var(--font-size-6);
+            width: 100%;
+            border: 1px solid red;
+            padding-left: 35px;
+            border-radius: 4px;
+          }
+          .submit         
+          {
+            margin-top: 16px;
+            background-color: var(--color-secondary);
+            height: 50px;
+            width: 50%;
+            font-size: var(--font-size-6);
+            border-radius: 3px;
+          }
+        }
+      }
+      .container--inscription
+      {
+        .registration
+        {
+          .container--name
+          {
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            .field
+            {
+              width: 45%;
+            }
+          }
+        }
+      }
+    }
+  }
+
+
 }

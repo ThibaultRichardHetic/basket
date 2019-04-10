@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="<?= URL ?>/assets/styles/reset.min.css">
     <link rel="stylesheet" href="<?= URL ?>/assets/styles/style.min.css">
 </head>
-<body class="body--home">
+<body class="body">
   <header class="header">
     <nav class="nav">
       <div class="container--logo">
