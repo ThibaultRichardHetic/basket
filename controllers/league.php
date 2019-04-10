@@ -1,5 +1,5 @@
 <?php
 
-$title = 'ligue';
+$title = 'Ligue';
 
 include '../views/pages/league.php';

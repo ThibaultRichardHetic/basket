@@ -29,6 +29,11 @@
   --typo-current: nunitoRegular; 
 }
 
+/* 
+*
+** for all pages start
+*
+*/
 .body
 {
   .header
@@ -75,6 +80,85 @@
       }
     }
   }
+  .container--form
+  {
+    width: 40%;
+    .title--form
+    {
+      color: var(--color-primary);
+      font-size: var(--font-size-4);
+      margin-bottom: 40px;
+      font-family: var(--typo-title);
+    }
+    .field
+    {
+      position: relative;
+      margin-bottom: 24px;
+      font-family: var(--typo-current);
+      label
+      {
+        color: #696969;
+        position: absolute;
+        font-size: var(--font-size-6);
+        top: calc(50% - (var(--font-size-6)/ 2));
+        left: 35px;
+        transition: all 0.3s;
+      }
+      .label--focus
+      {
+        top: calc(10%);
+        font-size: 14px;
+        transition: all 0.3s;
+      }
+      .input
+      {
+        background-color: #F3F5FA;
+        height: 70px;
+        color: var(--color-text);
+        font-size: var(--font-size-6);
+        width: 100%;
+        padding-left: 35px;
+        border-radius: 4px;
+      }
+      .submit         
+      {
+        margin-top: 16px;
+        background-color: var(--color-secondary);
+        height: 50px;
+        width: 50%;
+        font-size: var(--font-size-6);
+        border-radius: 3px;
+      }
+    }
+  }
+  .footer
+  {
+    background-color: var(--color-primary);
+    height: 20vh;
+    color: var(--color-text-2);
+    font-size: var(--font-size-6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: var(--typo-current);
+    .container--text
+    {
+      .text
+      {
+        margin-bottom: 20px;
+      }
+    }
+  }
+}
+/* 
+*
+** for all pages end
+*
+*/
+
+.body
+{
   .main--home
   {
     .section--1
@@ -164,25 +248,7 @@
       }
     }
   }
-  .footer
-  {
-    background-color: var(--color-primary);
-    height: 20vh;
-    color: var(--color-text-2);
-    font-size: var(--font-size-6);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    font-family: var(--typo-current);
-    .container--text
-    {
-      .text
-      {
-        margin-bottom: 20px;
-      }
-    }
-  }
+  
   /*
   *
   ** page de connexion début
@@ -216,57 +282,6 @@
       display: flex;
       justify-content: space-between;
       margin-bottom: 100px;
-      .container--form
-      {
-        width: 40%;
-        .title--form
-        {
-          color: var(--color-primary);
-          font-size: var(--font-size-4);
-          margin-bottom: 40px;
-          font-family: var(--typo-title);
-        }
-        .field
-        {
-          position: relative;
-          margin-bottom: 24px;
-          font-family: var(--typo-current);
-          label
-          {
-            color: #696969;
-            position: absolute;
-            font-size: var(--font-size-6);
-            top: calc(50% - (var(--font-size-6)/ 2));
-            left: 35px;
-            transition: all 0.3s;
-          }
-          .label--focus
-          {
-            top: calc(10%);
-            font-size: 14px;
-            transition: all 0.3s;
-          }
-          .input
-          {
-            background-color: #F3F5FA;
-            height: 70px;
-            color: var(--color-text);
-            font-size: var(--font-size-6);
-            width: 100%;
-            padding-left: 35px;
-            border-radius: 4px;
-          }
-          .submit         
-          {
-            margin-top: 16px;
-            background-color: var(--color-secondary);
-            height: 50px;
-            width: 50%;
-            font-size: var(--font-size-6);
-            border-radius: 3px;
-          }
-        }
-      }
       .container--inscription
       {
         .registration
@@ -285,13 +300,14 @@
       }
     }
   }
-
+  
   /*
-  ** page de ligue début
+  ** page de league start
   */
 
-  .main--ligue
+  .main--league
   {
+    margin-bottom: 100px;
     .section--1
     {
       height: 30vh;
@@ -309,6 +325,42 @@
         }
       }
     }
+    .section--2
+    {
+      position: relative;
+      width: 80%;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      padding-top: 100px;
+      .container--form
+      {
+        width: 50%;
+        .info
+        {
+          font-family: var(--typo-current);
+          font-size: var(--font-size-5);
+          line-height: calc(1.2 * var(--font-size-5));
+          padding-top: 50px;
+          margin-bottom: 21px;
+        }
+        .button--add
+        {
+          .text
+          {
+            font-size: var(--font-size-6);
+            font-family: var(--typo-current);
+            color: #696969;
+            cursor: pointer;
+          }
+        }
+      }
+      .container--illu
+      {
+        width: 400px;
+        height: 600px;
+        background-image: url(../images/ligue-basket-bg.png);
+      }
+    } 
   }
-
 }
