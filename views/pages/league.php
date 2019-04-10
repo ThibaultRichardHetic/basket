@@ -1,4 +1,4 @@
-<?php include '../views/partials/home-header.php' ?>
+<?php include '../views/partials/header.php' ?>
 
   <main class="main--league">
     <section class="section--1">

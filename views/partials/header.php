@@ -17,6 +17,7 @@ $prepare = $pdo->prepare('SELECT first_name FROM users WHERE id = :id ');
 $prepare->bindValue('id', $_SESSION['id']);
 $prepare->execute();
 
+
 $userName = ucfirst($prepare->fetch()->first_name);
 
 ?>
