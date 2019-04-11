@@ -6,9 +6,9 @@ $messages = [
 'success' => [],
 ];
 
-$a=array();
-array_push($a,"blue","yellow");
-print_r($a);
+$newUsers = array();
+array_push($newUsers,"blue","yellow");
+print_r($newUsers);
 
 
 if (!empty($_POST)) 
@@ -16,7 +16,7 @@ if (!empty($_POST))
 
   //Get variables 
   $league_name = $_POST['league_name'];
-  $friend_name = $_POST['friend_name'];
+  $friend_name_1 = $_POST['friend_name_1'];
 
   // Handler 
   if (empty($league_name)) {
@@ -28,8 +28,6 @@ if (!empty($_POST))
     $messages['error'][] = 'Il manque le mail de votre ami';
     $_POST['friend_name'] = 'Il manque le mail de votre ami';
   }
-
-
 
 
 

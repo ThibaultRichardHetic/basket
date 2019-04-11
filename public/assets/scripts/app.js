@@ -18,57 +18,23 @@ for (let i = 0; i < $input.length; i++) {
 }
 
 
-class League
-{
-  constructor()
-  {
 
-  }
-
-  addFriend()
-  {
-    let newField = document.createElement('div')
-    newField.className = 'field'
-
-    let newLabel = document.createElement('label')
-    newLabel.className = 'js-label'
-    newLabel.setAttribute('for', 'friend-name') 
-    newField.appendChild(newLabel)
-
-    let newInput = document.createElement('input')
-    newInput.className = 'input js-input'
-    newInput.setAttribute('name', 'friend-name') 
-    newInput.setAttribute('placeholder', 'Mail de ton ami') 
-    newInput.setAttribute('type', 'text') 
-    newField.appendChild(newInput)
-
-    document.querySelector('.js-new-field').appendChild(newField)
- 
-  }
-} 
-
-const league = new League()
 
 const $addButton = document.querySelector('.js-add-friend')
+const $newUser1 = document.querySelector('.js-field-1')
+const $newUser2 = document.querySelector('.js-field-2')
+
+let isPossible = 0
 
 $addButton.addEventListener('click', () =>
 {
-  league.addFriend()
+  if (isPossible == 0){
+    $newUser1.className = 'field js-field-1'
+  }
+  if(isPossible == 1)
+  {
+    $newUser2.className = 'field js-field-2'
+  }
+  isPossible += 1
 
 })
-
-
-
-
-{/* let newCityCross = document.createElement('div')
-newCityCross.className = `cross js-cross-${index}`
-let newCross1 = document.createElement('div')
-newCross1.className = 'cross__1'
-newCityCross.appendChild(newCross1)
-let newCross2 = document.createElement('div')
-newCross2.className = 'cross__2'
-newCityCross.appendChild(newCross2)
-newCity.appendChild(newCityCross)
-
-this.$myCity.appendChild(newCity)
-this.mine.push(this.$myCity) */}

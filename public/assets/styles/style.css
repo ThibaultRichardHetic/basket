@@ -258,6 +258,8 @@
           font-family: var(--typo-current);
           color: #696969;
           cursor: pointer; }
+        .body .main--league .section--2 .container--form .hidden {
+          display: none; }
         .body .main--league .section--2 .container--form .field .submit {
           cursor: pointer; }
       .body .main--league .section--2 .container--illu {
