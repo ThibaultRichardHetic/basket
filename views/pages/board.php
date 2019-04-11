@@ -31,9 +31,12 @@
               <div class="container--title">
                 <h4 class="league__title"><?= $_league->name ?></h4>
               </div>
-              <div class="button--go">
-                <a class="link" href="">Go</a>
-              </div>
+
+              <a href="<?= URL ?>club?<?= $_league->name?>">
+                <div class="button--go">
+                  <p class="link">Go</p>
+                </div>
+              </a>
             </div>
           <?php endforeach; ?>
 

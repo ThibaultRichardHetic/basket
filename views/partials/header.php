@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title><?= !empty($title) ? $title : '' ?></title>
+    <link rel="icon" href="<?= URL ?>/assets/images/favicon.png">
     <link rel="stylesheet" href="<?= URL ?>/assets/styles/reset.min.css">
     <link rel="stylesheet" href="<?= URL ?>/assets/styles/style.min.css">
 </head>
@@ -28,7 +29,7 @@ $urlAvatar = 'https://avatars.dicebear.com/v2/male/:'.$_SESSION['id'].'.svg'
   <header class="header">
     <nav class="nav">
       <div class="container--logo">
-      <a class="link--logo" href="<?= URL ?>"> 
+      <a class="link--logo" href="<?= URL ?>tableau"> 
         <img class="logo" src="assets/images/logo.png" alt="logo Alley oop">
       </a>
       </div>
@@ -37,10 +38,11 @@ $urlAvatar = 'https://avatars.dicebear.com/v2/male/:'.$_SESSION['id'].'.svg'
       </div>
       <div class="container--profile">
         <p class="profile__name">Bonjour <?php echo($userName); ?></p>
-        <div class="container--img">
-          <img class="profile__img" src="<?= $urlAvatar ?>" alt="">
-        </div>
-        <img class="profile__icon" src="" alt="">
+        <a href="<?= URL ?>tableau">
+          <div class="container--img">
+            <img class="profile__img" src="<?= $urlAvatar ?>" alt="">
+          </div>
+        </a>
       </div>
     </nav>
   </header>

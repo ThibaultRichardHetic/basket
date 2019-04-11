@@ -34,6 +34,7 @@ $addButton.addEventListener('click', () =>
   if(isPossible == 1)
   {
     $newUser2.className = 'field js-field-2'
+    $addButton.className = 'hidden'
   }
   isPossible += 1
 

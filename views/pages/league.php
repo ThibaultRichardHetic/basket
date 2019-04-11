@@ -1,10 +1,11 @@
-<?php include '../views/partials/header.php' ?>
+<?php include '../views/partials/header.php';?>
 
 <?php include '../controllers/data/get-league-info.php';?>
 <?php include '../controllers/data/get-league-user-info.php';?>
 <?php include '../controllers/data/get-user-info.php';?>
 
 <?php include '../controllers/data/league-handler.php';?>
+
 
   <main class="main--league">
     <section class="section--1">

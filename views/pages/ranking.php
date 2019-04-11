@@ -1,6 +1,5 @@
 <?php include '../views/partials/header.php' ?>
-<?php require '../controllers/data/database.php'; ?>
-<?php require '../controllers/data/get-user-info.php'; ?>
+
 <main class="main--ranking">
   <section class="section--1">
     <div class="container">

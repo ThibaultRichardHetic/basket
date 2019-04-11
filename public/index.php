@@ -33,6 +33,10 @@ else if($q == 'match')
 {
   $controller = 'match';
 }
+else if($q == 'club')
+{
+  $controller = 'club';
+}
 else if ($q == '') {
   $controller = 'home';
 }
