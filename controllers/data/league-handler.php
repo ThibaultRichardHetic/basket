@@ -28,14 +28,9 @@ if (!empty($_POST))
 
   $myMail = $prepare->fetch()->mail;
 
-  echo '<pre>';
-  print_r($myMail);
-  echo '</pre>';
-
   if ($myMail == $friend_mail_1 || $myMail == $friend_mail_2 || $myMail == $friend_mail_3 || $myMail == $friend_mail_4){
     $messages['error'][] = 'Vous ne pouvez pas ajouter votre propre mail… vous serez dans la ligue ne vous inquiétez pas !';
   }
-
 
   if (empty($league_name)) {
     $messages['error'][] = 'Il manque votre nom d équipe';
@@ -63,6 +58,9 @@ if (!empty($_POST))
   }
 
   if (!empty($friend_mail_2)) {
+    if ($friend_mail_2 == $friend_mail_1) {
+      $messages['error'][] = 'Vous avez rentré deux fois le meme mail';
+    }
     foreach ($users as $_user) {
       if ($friend_mail_2 === ($_user->mail)) {
         $add_mail_2 = true;
@@ -71,6 +69,9 @@ if (!empty($_POST))
   }
 
   if (!empty($friend_mail_3)) {
+    if (($friend_mail_3 == $friend_mail_1) || ($friend_mail_3 == $friend_mail_2)) {
+      $messages['error'][] = 'Vous avez rentré deux fois le meme mail';
+    }
     foreach ($users as $_user) {
       if ($friend_mail_3 === ($_user->mail)) {
         $add_mail_3 = true;
@@ -79,6 +80,9 @@ if (!empty($_POST))
   }
 
   if (!empty($friend_mail_4)) {
+    if (($friend_mail_4 == $friend_mail_1) || ($friend_mail_4 == $friend_mail_2) || ($friend_mail_4 == $friend_mail_3)) {
+      $messages['error'][] = 'Vous avez rentré deux fois le meme mail';
+    }
     foreach ($users as $_user) {
       if ($friend_mail_4 === ($_user->mail)) {
         $add_mail_4 = true;
@@ -109,7 +113,9 @@ if (!empty($_POST))
     $prepare->bindValue('league', $leagueId);
     $prepare->bindValue('user', $userId);
     $prepare->execute();
-    
+
+    header('Location:../public/tableau');
+    exit();
   }
   if ((empty($messages['error'])) && ($add_mail_1 == true) && ($add_mail_2 == true) && ($add_mail_3 == false) && ($add_mail_4 == false)) {
 
@@ -144,7 +150,9 @@ if (!empty($_POST))
     $prepare->bindValue('league', $leagueId);
     $prepare->bindValue('user', $userId_2);
     $prepare->execute();
-    
+
+    header('Location:../public/tableau');
+    exit();
   }
   if ((empty($messages['error'])) && ($add_mail_1 == true) && ($add_mail_2 == true) && ($add_mail_3 == true) && ($add_mail_4 == false)) {
 
@@ -191,6 +199,8 @@ if (!empty($_POST))
     $prepare->bindValue('user', $userId_3);
     $prepare->execute();
 
+    header('Location:../public/tableau');
+    exit();
   }
   if ((empty($messages['error'])) && ($add_mail_1 == true) && ($add_mail_2 == true) && ($add_mail_3 == true) && ($add_mail_4 == true)) {
 
@@ -247,6 +257,9 @@ if (!empty($_POST))
     $prepare->bindValue('league', $leagueId);
     $prepare->bindValue('user', $userId_4);
     $prepare->execute();
+
+    header('Location:../public/tableau');
+    exit();
   }
 }
 
