@@ -2,46 +2,19 @@
 
 <?php 
 
-
-
-
-
-
-$myStr = URL.'club?';
-
-echo '<pre>';
-print_r($myStr);
-echo '</pre>';
-
-
-
-
-
+$urlNatif = URL.'club?';
 
 $adresse = "http://".$_SERVER['SERVER_NAME'].':'.$_SERVER['SERVER_PORT'].$_SERVER["REQUEST_URI"];
 $_SESSION['adresse'] = $adresse;
 $newAdress = $_SESSION['adresse'];
 
-echo '<pre>';
-print_r($newAdress);
-echo '</pre>';
+$nbLeagueChara = strlen($newAdress) - strlen($urlNatif);
 
-$nbChara = strlen($myStr) - strlen($newAdress);
 
-$rest = substr("abcdef", 2, -1);  // retourne "cde"
-
-echo($rest);
+$leagueName = substr($newAdress, strlen($urlNatif), $nbLeagueChara);  
 
 echo '<pre>';
-print_r($nbChara);
-echo '</pre>';
-
-$rip = substr($newAdress, $nbChara, -1);  
-
-echo($rip);
-
-echo '<pre>';
-print_r($rip);
+print_r($leagueName);
 echo '</pre>';
 
 
