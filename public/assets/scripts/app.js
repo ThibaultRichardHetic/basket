@@ -20,9 +20,6 @@ for (let i = 0; i < $input.length; i++) {
   }
 }
 
-
-
-
 const $addButton = document.querySelector('.js-add-friend')
 const $newUser1 = document.querySelector('.js-field-1')
 const $newUser2 = document.querySelector('.js-field-2')

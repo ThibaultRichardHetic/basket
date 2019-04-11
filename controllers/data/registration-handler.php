@@ -15,7 +15,7 @@ if(!empty($_POST) && isset($_POST['register_submit']))
   $first_name = trim($_POST['first_name']);
   $last_name = trim($_POST['last_name']);
   $team_name = trim($_POST['team_name']);
-  $mail = trim($_POST['mail']);
+  $mail = strtolower(trim($_POST['mail']));
   $password = sha1($_POST['password']);
   $password_confirmation = sha1($_POST['password_confirmation']);
 

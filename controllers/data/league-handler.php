@@ -8,20 +8,35 @@ $messages = [
 
 if (!empty($_POST)) 
 {
+
   //Get variables 
   $league_name = $_POST['league_name'];
-  $friend_mail_1 = $_POST['friend_mail_1'];
-  $friend_mail_2 = $_POST['friend_mail_2'];
-  $friend_mail_3 = $_POST['friend_mail_3'];
-  $friend_mail_4 = $_POST['friend_mail_4'];
+  $friend_mail_1 = strtolower(trim($_POST['friend_mail_1']));
+  $friend_mail_2 = strtolower(trim($_POST['friend_mail_2']));
+  $friend_mail_3 = strtolower(trim($_POST['friend_mail_3']));
+  $friend_mail_4 = strtolower(trim($_POST['friend_mail_4']));
 
   $add_mail_1 = false;
   $add_mail_2 = false;
   $add_mail_3 = false;
   $add_mail_4 = false;
 
-
   // Handler 
+  $prepare = $pdo->prepare('SELECT mail FROM users WHERE users.id = :id');
+  $prepare->bindValue('id', $_SESSION['id']);
+  $prepare->execute();
+
+  $myMail = $prepare->fetch()->mail;
+
+  echo '<pre>';
+  print_r($myMail);
+  echo '</pre>';
+
+  if ($myMail == $friend_mail_1 || $myMail == $friend_mail_2 || $myMail == $friend_mail_3 || $myMail == $friend_mail_4){
+    $messages['error'][] = 'Vous ne pouvez pas ajouter votre propre mail… vous serez dans la ligue ne vous inquiétez pas !';
+  }
+
+
   if (empty($league_name)) {
     $messages['error'][] = 'Il manque votre nom d équipe';
     $_POST['league_name'] = 'Il manque votre nom d équipe';
