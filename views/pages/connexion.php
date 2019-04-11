@@ -32,33 +32,33 @@
         <div class="container--name">
             <!-- firs_name -->
           <div class="field">
-            <label class="js-label" for="first_name">Prénom</label>
+            <label class="js-label" for="first_name" data-active="<?= !empty($_POST['first_name'])?>">Prénom</label>
             <input class="input js-input" type="text" name="first_name" value="<?= $_POST['first_name']?>">
           </div>
           <!-- last_name -->
           <div class="field">
-            <label class="js-label" for="last_name">Nom</label>
+            <label class="js-label" for="last_name" data-active="<?= !empty($_POST['last_name'])?>">Nom</label>
             <input class="input js-input" type="text" name="last_name" value="<?= $_POST['last_name']?>">
           </div>
         </div> 
         <!-- team_name -->
         <div class="field">
-          <label class="js-label" for="team_name">Nom d'équipe</label>
+          <label class="js-label" for="team_name" data-active="<?= !empty($_POST['team_name'])?>">Nom d'équipe</label>
           <input class="input js-input" type="text" name="team_name" value="<?= $_POST['team_name']?>">
         </div>
         <!-- mail -->
         <div class="field">
-          <label class="js-label" for="mail">Adresse mail</label>
+          <label class="js-label" for="mail" data-active="<?= !empty($_POST['mail'])?>">Adresse mail</label>
           <input class="input js-input" type="mail" name="mail" value="<?= $_POST['mail']?>">
         </div>
         <!-- password -->
         <div class="field">
-          <label  class="js-label" for="password">Mot de passe</label>
+          <label  class="js-label" for="password" data-active="<?= !empty($_POST['password'])?>">Mot de passe</label>
           <input class="input js-input" type="password" name="password" value="<?= $_POST['password']?>">
         </div>
         <!-- password_confirmation  -->
         <div class="field">
-          <label class="js-label" for="password_confirmation">Confiration de votre mot de passe</label>
+          <label class="js-label" for="password_confirmation" data-active="<?= !empty($_POST['password_confirmation'])?>">Confiration de votre mot de passe</label>
           <input class="input js-input" type="password" name="password_confirmation" value="<?= $_POST['password_confirmation']?>">
         </div>
         <!-- submit -->
@@ -71,12 +71,12 @@
       <h4 class="title--form">Connexion</h4>
       <form action="" method="post">
         <div class="field">
-          <label  class="js-label" for="connexion_mail">Adresse mail</label>
+          <label  class="js-label" for="connexion_mail" data-active="<?= !empty($_POST['connexion_mail'])?>">Adresse mail</label>
           <input class="input js-input" type="text" name="connexion_mail" value="<?= $_POST['connexion_mail']?>">
         </div>
         
         <div class="field">
-          <label  class="js-label" for="connexion_password">Mot de passe</label>
+          <label  class="js-label" for="connexion_password" data-active="<?= !empty($_POST['connexion_password'])?>">Mot de passe</label>
           <input class="input js-input" type="password" name="connexion_password" value="<?= $_POST['connexion_password']?>">
         </div>
 

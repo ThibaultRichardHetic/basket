@@ -74,11 +74,6 @@ if (!empty($_POST))
   // Success
   if ((empty($messages['error'])) && ($add_mail_1 == true) && ($add_mail_2 == false) && ($add_mail_3 == false) && ($add_mail_4 == false)) {
 
-    echo '<pre>';
-    print_r($friend_mail_1);
-    echo '</pre>';
-    echo('ta mere');
-
     $prepare = $pdo->prepare('INSERT INTO leagues (name) VALUES (:name)');
     $prepare->bindValue('name', $league_name);
     $prepare->execute();
@@ -89,9 +84,35 @@ if (!empty($_POST))
 
     $userId = $prepare->fetch()->id;
 
-    echo '<pre>';
-    print_r($userId);
-    echo '</pre>';
+    $prepare = $pdo->prepare('SELECT id FROM leagues WHERE leagues.name = :name');
+    $prepare->bindValue('name', $league_name);
+    $prepare->execute();
+
+    $leagueId = $prepare->fetch()->id;
+
+    $prepare = $pdo->prepare('INSERT INTO league_users (id_league, id_user) VALUES (:league, :user)');
+    $prepare->bindValue('league', $leagueId);
+    $prepare->bindValue('user', $userId);
+    $prepare->execute();
+    
+  }
+  if ((empty($messages['error'])) && ($add_mail_1 == true) && ($add_mail_2 == true) && ($add_mail_3 == false) && ($add_mail_4 == false)) {
+
+    $prepare = $pdo->prepare('INSERT INTO leagues (name) VALUES (:name)');
+    $prepare->bindValue('name', $league_name);
+    $prepare->execute();
+
+    $prepare = $pdo->prepare('SELECT id FROM users WHERE users.mail = :mail');
+    $prepare->bindValue('mail', $friend_mail_1);
+    $prepare->execute();
+
+    $userId_1 = $prepare->fetch()->id;
+
+    $prepare = $pdo->prepare('SELECT id FROM users WHERE users.mail = :mail');
+    $prepare->bindValue('mail', $friend_mail_2);
+    $prepare->execute();
+
+    $userId_2 = $prepare->fetch()->id;
 
     $prepare = $pdo->prepare('SELECT id FROM leagues WHERE leagues.name = :name');
     $prepare->bindValue('name', $league_name);
@@ -99,62 +120,118 @@ if (!empty($_POST))
 
     $leagueId = $prepare->fetch()->id;
 
-    echo '<pre>';
-    print_r($leagueId);
-    echo '</pre>';
-
+    $prepare = $pdo->prepare('INSERT INTO league_users (id_league, id_user) VALUES (:league, :user)');
+    $prepare->bindValue('league', $leagueId);
+    $prepare->bindValue('user', $userId_1);
+    $prepare->execute();
 
     $prepare = $pdo->prepare('INSERT INTO league_users (id_league, id_user) VALUES (:league, :user)');
     $prepare->bindValue('league', $leagueId);
-    $prepare->bindValue('user', $userId);
+    $prepare->bindValue('user', $userId_2);
     $prepare->execute();
-
-
-    
-  }
-  if ((empty($messages['error'])) && ($add_mail_1 == true) && ($add_mail_2 == true) && ($add_mail_3 == false) && ($add_mail_4 == false)) {
-
-    echo '<pre>';
-    print_r($friend_mail_1);
-    echo '</pre>';
-    echo '<pre>';
-    print_r($friend_mail_2);
-    echo '</pre>';
-
-    echo('ton père');
     
   }
   if ((empty($messages['error'])) && ($add_mail_1 == true) && ($add_mail_2 == true) && ($add_mail_3 == true) && ($add_mail_4 == false)) {
 
-    echo '<pre>';
-    print_r($friend_mail_1);
-    echo '</pre>';
-    echo '<pre>';
-    print_r($friend_mail_2);
-    echo '</pre>';
-    echo '<pre>';
-    print_r($friend_mail_3);
-    echo '</pre>';
-    
-    echo('ta soeur');
+    $prepare = $pdo->prepare('INSERT INTO leagues (name) VALUES (:name)');
+    $prepare->bindValue('name', $league_name);
+    $prepare->execute();
+
+    $prepare = $pdo->prepare('SELECT id FROM users WHERE users.mail = :mail');
+    $prepare->bindValue('mail', $friend_mail_1);
+    $prepare->execute();
+
+    $userId_1 = $prepare->fetch()->id;
+
+    $prepare = $pdo->prepare('SELECT id FROM users WHERE users.mail = :mail');
+    $prepare->bindValue('mail', $friend_mail_2);
+    $prepare->execute();
+
+    $userId_2 = $prepare->fetch()->id;
+
+    $prepare = $pdo->prepare('SELECT id FROM users WHERE users.mail = :mail');
+    $prepare->bindValue('mail', $friend_mail_3);
+    $prepare->execute();
+
+    $userId_3 = $prepare->fetch()->id;
+
+    $prepare = $pdo->prepare('SELECT id FROM leagues WHERE leagues.name = :name');
+    $prepare->bindValue('name', $league_name);
+    $prepare->execute();
+
+    $leagueId = $prepare->fetch()->id;
+
+    $prepare = $pdo->prepare('INSERT INTO league_users (id_league, id_user) VALUES (:league, :user)');
+    $prepare->bindValue('league', $leagueId);
+    $prepare->bindValue('user', $userId_1);
+    $prepare->execute();
+
+    $prepare = $pdo->prepare('INSERT INTO league_users (id_league, id_user) VALUES (:league, :user)');
+    $prepare->bindValue('league', $leagueId);
+    $prepare->bindValue('user', $userId_2);
+    $prepare->execute();
+
+    $prepare = $pdo->prepare('INSERT INTO league_users (id_league, id_user) VALUES (:league, :user)');
+    $prepare->bindValue('league', $leagueId);
+    $prepare->bindValue('user', $userId_3);
+    $prepare->execute();
+
   }
   if ((empty($messages['error'])) && ($add_mail_1 == true) && ($add_mail_2 == true) && ($add_mail_3 == true) && ($add_mail_4 == true)) {
 
-    echo '<pre>';
-    print_r($friend_mail_1);
-    echo '</pre>';
-    echo '<pre>';
-    print_r($friend_mail_2);
-    echo '</pre>';
-    echo '<pre>';
-    print_r($friend_mail_3);
-    echo '</pre>';
-    echo '<pre>';
-    print_r($friend_mail_4);
-    echo '</pre>';
-    
-    echo('ton frère');
+    $prepare = $pdo->prepare('INSERT INTO leagues (name) VALUES (:name)');
+    $prepare->bindValue('name', $league_name);
+    $prepare->execute();
 
+    $prepare = $pdo->prepare('SELECT id FROM users WHERE users.mail = :mail');
+    $prepare->bindValue('mail', $friend_mail_1);
+    $prepare->execute();
+
+    $userId_1 = $prepare->fetch()->id;
+
+    $prepare = $pdo->prepare('SELECT id FROM users WHERE users.mail = :mail');
+    $prepare->bindValue('mail', $friend_mail_2);
+    $prepare->execute();
+
+    $userId_2 = $prepare->fetch()->id;
+
+    $prepare = $pdo->prepare('SELECT id FROM users WHERE users.mail = :mail');
+    $prepare->bindValue('mail', $friend_mail_3);
+    $prepare->execute();
+
+    $userId_3 = $prepare->fetch()->id;
+
+    $prepare = $pdo->prepare('SELECT id FROM users WHERE users.mail = :mail');
+    $prepare->bindValue('mail', $friend_mail_4);
+    $prepare->execute();
+
+    $userId_4 = $prepare->fetch()->id;
+
+    $prepare = $pdo->prepare('SELECT id FROM leagues WHERE leagues.name = :name');
+    $prepare->bindValue('name', $league_name);
+    $prepare->execute();
+
+    $leagueId = $prepare->fetch()->id;
+
+    $prepare = $pdo->prepare('INSERT INTO league_users (id_league, id_user) VALUES (:league, :user)');
+    $prepare->bindValue('league', $leagueId);
+    $prepare->bindValue('user', $userId_1);
+    $prepare->execute();
+
+    $prepare = $pdo->prepare('INSERT INTO league_users (id_league, id_user) VALUES (:league, :user)');
+    $prepare->bindValue('league', $leagueId);
+    $prepare->bindValue('user', $userId_2);
+    $prepare->execute();
+
+    $prepare = $pdo->prepare('INSERT INTO league_users (id_league, id_user) VALUES (:league, :user)');
+    $prepare->bindValue('league', $leagueId);
+    $prepare->bindValue('user', $userId_3);
+    $prepare->execute();
+
+    $prepare = $pdo->prepare('INSERT INTO league_users (id_league, id_user) VALUES (:league, :user)');
+    $prepare->bindValue('league', $leagueId);
+    $prepare->bindValue('user', $userId_4);
+    $prepare->execute();
   }
 }
 

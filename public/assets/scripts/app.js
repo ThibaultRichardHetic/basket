@@ -15,6 +15,9 @@ for (let i = 0; i < $input.length; i++) {
       $label[i].classList.remove('label--focus')
     }
   })
+  if (($label[i].getAttribute('data-active')) != '') {
+    $label[i].classList.add('label--focus')    
+  }
 }
 
 
