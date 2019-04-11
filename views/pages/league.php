@@ -25,7 +25,8 @@
             <label class="js-label" for="friend-name">Mail / Pseudo de ton ami</label>
             <input class="input js-input" type="text" name="friend-name">
           </div>
-          <div class="button--add">
+          <div class="js-en-y"></div>
+          <div class="button--add js-add-friend">
             <p class="text">+ Ajouter un ami</p>
           </div>
           <div class="field">

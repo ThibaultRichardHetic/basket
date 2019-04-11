@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @font-face {
   font-family: 'cooperHewittHeavy';
   src: url(../fonts/cooper-hewitt-heavy.otf); }
@@ -129,7 +128,7 @@
 .body {
   /*
   *
-  ** page de connexion début
+  ** page connexion sart
   *
   */
   /*
@@ -258,6 +257,8 @@
           font-size: var(--font-size-6);
           font-family: var(--typo-current);
           color: #696969;
+          cursor: pointer; }
+        .body .main--league .section--2 .container--form .field .submit {
           cursor: pointer; }
       .body .main--league .section--2 .container--illu {
         width: 400px;

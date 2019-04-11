@@ -25,6 +25,14 @@ else if($q == 'tableau')
 {
   $controller = 'board';
 }
+else if($q == 'classement')
+{
+  $controller = 'ranking';
+}
+else if($q == 'match')
+{
+  $controller = 'match';
+}
 else if ($q == '') {
   $controller = 'home';
 }

@@ -288,7 +288,7 @@
   
   /*
   *
-  ** page de connexion début
+  ** page connexion sart
   *
   */
   .main--connexion
@@ -407,6 +407,13 @@
             font-size: var(--font-size-6);
             font-family: var(--typo-current);
             color: #696969;
+            cursor: pointer;
+          }
+        }
+        .field
+        {
+          .submit
+          {
             cursor: pointer;
           }
         }
