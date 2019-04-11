@@ -38,11 +38,11 @@ class League
     let newInput = document.createElement('input')
     newInput.className = 'input js-input'
     newInput.setAttribute('name', 'friend-name') 
-    newInput.setAttribute('placeholder', 'Mail / Nom du club de ton ami') 
+    newInput.setAttribute('placeholder', 'Mail de ton ami') 
     newInput.setAttribute('type', 'text') 
     newField.appendChild(newInput)
 
-    document.querySelector('.js-en-y').appendChild(newField)
+    document.querySelector('.js-new-field').appendChild(newField)
  
   }
 } 
