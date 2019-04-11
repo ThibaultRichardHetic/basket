@@ -367,18 +367,19 @@
   *
   */
 
+  .title--ranking
+  {
+    color: var(--color-primary);
+    font-size: var(--font-size-4);
+    margin-top: 10vh;
+    margin-left: 18vh;
+    font-family: var(--typo-title);
+  }
   .main--ranking
   {
     .text
     {
       font-size: var(--font-size-3);
-      font-family: var(--typo-current);
-      line-height: calc(1.2 * var(--font-size-3));
-      // margin-top: 4px;
-    }
-    .text-second
-    {
-      font-size: var(--font-size-5);
       font-family: var(--typo-current);
       line-height: calc(1.2 * var(--font-size-3));
       // margin-top: 4px;
@@ -425,10 +426,11 @@
       position: relative;
       width: 80%;
       margin: auto;
-      margin-top: 70px; 
+      margin-top: 4vh; 
       display: flex;
       justify-content: space-between;
       margin-bottom: 100px;
+
       .container-infos
       {
         width: 85vh;
@@ -439,49 +441,62 @@
         align-items: center;
         justify-content: space-around;
       }
-      .space-infos
-      {
-        height: 8vh;
-        width: 30vh;
-      }
-      .space-datas-1
-      {
-        height: 8vh;
-        width: 20vh;
-      }
-      .space-datas-2
-      {
-        height: 8vh;
-        width: 16vh;
-      }
-      .space-datas-3
-      {
-        height: 8vh;
-        width: 20vh;
-      }
-      .space-datas-4
-      {
-        height: 8vh;
-        width: 20vh;
-      }
       .container-stats
       {
-        .player-1
-        {
-          width: 85vh;
-          height: 8vh;
-          background-color: #FFFFFF;
-          border-radius: 4px;
-          display: flex;
-          align-items: center;
-          justify-content: space-around;
-        }
-      }
-      .line
-      {
         width: 85vh;
-        height: 0.1vh;
-        background-color: rgba(75, 75, 75, 0.4);
+        height: 8vh;
+        border-radius: 4px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+      }
+      .col-name
+      {
+        width: 25%;
+        height: 8vh;
+        display: flex;
+        align-items: center;
+        font-size: var(--font-size-5);
+        font-family: var(--typo-current);
+        line-height: calc(1.2 * var(--font-size-3));
+      }
+      .col-points
+      {
+        width: 10%;
+        height: 8vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: var(--font-size-5);
+        font-family: var(--typo-current);
+        line-height: calc(1.2 * var(--font-size-3));
+      }
+      .col-win
+      {
+        width: 10%;
+        height: 8vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: var(--font-size-5);
+        font-family: var(--typo-current);
+        line-height: calc(1.2 * var(--font-size-3));
+      }
+      .col-loose
+      {
+        width: 10%;
+        height: 8vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: var(--font-size-5);
+        font-family: var(--typo-current);
+        line-height: calc(1.2 * var(--font-size-3));
+      }
+      .dunk
+      {
+        width: 50%;
+        height: 60vh;
       }
     }
   }

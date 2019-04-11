@@ -236,14 +236,16 @@
       justify-content: space-between; }
       .body .main--connexion .section--2 .container--inscription .registration .container--name .field {
         width: 45%; }
+  .body .title--ranking {
+    color: var(--color-primary);
+    font-size: var(--font-size-4);
+    margin-top: 10vh;
+    margin-left: 18vh;
+    font-family: var(--typo-title); }
   .body .main--ranking {
     margin-bottom: 100px; }
     .body .main--ranking .text {
       font-size: var(--font-size-3);
-      font-family: var(--typo-current);
-      line-height: calc(1.2 * var(--font-size-3)); }
-    .body .main--ranking .text-second {
-      font-size: var(--font-size-5);
       font-family: var(--typo-current);
       line-height: calc(1.2 * var(--font-size-3)); }
     .body .main--ranking .section--1 {
@@ -273,7 +275,7 @@
       position: relative;
       width: 80%;
       margin: auto;
-      margin-top: 70px;
+      margin-top: 4vh;
       display: flex;
       justify-content: space-between;
       margin-bottom: 100px; }
@@ -285,33 +287,51 @@
         display: flex;
         align-items: center;
         justify-content: space-around; }
-      .body .main--ranking .section--3 .space-infos {
-        height: 8vh;
-        width: 30vh; }
-      .body .main--ranking .section--3 .space-datas-1 {
-        height: 8vh;
-        width: 20vh; }
-      .body .main--ranking .section--3 .space-datas-2 {
-        height: 8vh;
-        width: 16vh; }
-      .body .main--ranking .section--3 .space-datas-3 {
-        height: 8vh;
-        width: 20vh; }
-      .body .main--ranking .section--3 .space-datas-4 {
-        height: 8vh;
-        width: 20vh; }
-      .body .main--ranking .section--3 .container-stats .player-1 {
+      .body .main--ranking .section--3 .container-stats {
         width: 85vh;
         height: 8vh;
-        background-color: #FFFFFF;
         border-radius: 4px;
         display: flex;
         align-items: center;
         justify-content: space-around; }
-      .body .main--ranking .section--3 .line {
-        width: 85vh;
-        height: 0.1vh;
-        background-color: rgba(75, 75, 75, 0.4); }
+      .body .main--ranking .section--3 .col-name {
+        width: 25%;
+        height: 8vh;
+        display: flex;
+        align-items: center;
+        font-size: var(--font-size-5);
+        font-family: var(--typo-current);
+        line-height: calc(1.2 * var(--font-size-3)); }
+      .body .main--ranking .section--3 .col-points {
+        width: 10%;
+        height: 8vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: var(--font-size-5);
+        font-family: var(--typo-current);
+        line-height: calc(1.2 * var(--font-size-3)); }
+      .body .main--ranking .section--3 .col-win {
+        width: 10%;
+        height: 8vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: var(--font-size-5);
+        font-family: var(--typo-current);
+        line-height: calc(1.2 * var(--font-size-3)); }
+      .body .main--ranking .section--3 .col-loose {
+        width: 10%;
+        height: 8vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: var(--font-size-5);
+        font-family: var(--typo-current);
+        line-height: calc(1.2 * var(--font-size-3)); }
+      .body .main--ranking .section--3 .dunk {
+        width: 50%;
+        height: 60vh; }
   .body .main--league {
     margin-bottom: 100px; }
     .body .main--league .section--1 {

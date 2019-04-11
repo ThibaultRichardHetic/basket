@@ -1,5 +1,5 @@
 <?php include '../views/partials/header.php' ?>
-
+<?php require '../controllers/data/get-user-info.php'; ?>
 <main class="main--ranking">
   <section class="section--1">
     <div class="container">
@@ -14,61 +14,46 @@
       </div>
   </section>
 
+<h4 class="title--ranking">Récapitulatif des scores</h4>
 <section class="section--3">
-    <div class="container--form container--inscription">
-    <h4 class="title--form">Récapitulatif des scores</h4>
-    <div class="container-infos">
-        <p class="text-second">Nom du club</p>
-        <div class="space-infos"></div>
-        <p class="text-second">Points</p>
-        <p class="text-second">Victoires</p>
-        <p class="text-second">Défaites</p>
-    </div>
-    <div class="container-stats">
-        <div class="player-1">
-            <p class="text-second">01. Loulou36</p>
-            <div class="space-datas-1"></div>
-            <p class="text-second">236</p>
-            <p class="text-second">10</p>
-            <p class="text-second">00</p>
-        </div>
-        <div class="line"></div>
-        <div class="player-1">
-            <p class="text-second">02. RomainDu14</p>
-            <div class="space-datas-2"></div>
-            <p class="text-second">142</p>
-            <p class="text-second">07</p>
-            <p class="text-second">03</p>
-        </div>
-        <div class="line"></div>
-        <div class="player-1">
-            <p class="text-second">03. Momo75</p>
-            <div class="space-datas-3"></div>
-            <p class="text-second">124</p>
-            <p class="text-second">03</p>
-            <p class="text-second">07</p>
-        </div>
-        <div class="line"></div>
-        <div class="player-1">
-            <p class="text-second">04. KissouXx</p>
-            <div class="space-datas-4"></div>
-            <p class="text-second">78</p>
-            <p class="text-second">00</p>
-            <p class="text-second">10</p>
-        </div>
-    </div>
+    <table class="table-stats">
+        <tr class="container-infos">
+            <td class="col-name">Nom de l'équipe</td>
+            <td></td>
+            <td class="col-points">Points</td>
+            <td class="col-win">Victoires</td>
+            <td class="col-loose">Défaites</td>
+        </tr>
+        <tr class="container-stats">
+            <td class="col-name">01. Loulou36</td>
+            <td></td>
+            <td class="col-points">236</td>
+            <td class="col-win">10</td>
+            <td class="col-loose">0</td>
+        </tr>
+        <tr class="container-stats">
+            <td class="col-name">02. RomainDu14</td>
+            <td></td>
+            <td class="col-points">142</td>
+            <td class="col-win">7</td>
+            <td class="col-loose">3</td>
+        </tr>
+        <tr class="container-stats">
+            <td class="col-name">03. Momo75</td>
+            <td></td>
+            <td class="col-points">124</td>
+            <td class="col-win">3</td>
+            <td class="col-loose">7</td>
+        </tr>
+        <tr class="container-stats">
+            <td class="col-name">04. KissouXx</td>
+            <td></td>
+            <td class="col-points">78</td>
+            <td class="col-win">0</td>
+            <td class="col-loose">10</td>
+        </tr>
+    </table>
+    <img src="/basket/public/assets/images/dunk.png" alt="">
 </section>
-
-
-
-
 </main>
 <?php include '../views/partials/footer.php' ?>
-
-
-
-
-
-
-
-
