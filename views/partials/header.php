@@ -20,6 +20,8 @@ $prepare->execute();
 
 $userName = ucfirst($prepare->fetch()->first_name);
 
+$urlAvatar = 'https://avatars.dicebear.com/v2/male/:'.$_SESSION['id'].'.svg'
+
 ?>
 
 <body class="body">
@@ -35,7 +37,9 @@ $userName = ucfirst($prepare->fetch()->first_name);
       </div>
       <div class="container--profile">
         <p class="profile__name">Bonjour <?php echo($userName); ?></p>
-        <img class="profile__img" src="" alt="">
+        <div class="container--img">
+          <img class="profile__img" src="<?= $urlAvatar ?>" alt="">
+        </div>
         <img class="profile__icon" src="" alt="">
       </div>
     </nav>

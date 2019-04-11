@@ -89,11 +89,30 @@
       }
       .container--profile
       {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
         .profile__name
         {
           color: var(--color-text-2);
           font-size: var(--font-size-6);
           font-family: var(--typo-current);
+        }
+        .container--img
+        {
+          width: 70px;
+          height: 70px;
+          background-color: #fff;
+          border-radius: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin-left: 40px;
+          .profile__img
+          {
+            width: 50px;
+            height: 50px;
+          }
         }
       }
     }
