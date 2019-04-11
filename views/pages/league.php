@@ -18,11 +18,11 @@
             Saisis l’adresse mail ou le pseudo de tes amis pour les inviter à rejoindre ta league :
           </p>
           <div class="field">
-            <label class="js-label" for="friend-name">Mail / Pseudo de ton ami</label>
+            <label class="js-label" for="friend-name">Mail / Nom du club de ton ami</label>
             <input class="input js-input" type="text" name="friend-name">
           </div>
           <div class="field">
-            <label class="js-label" for="friend-name">Mail / Pseudo de ton ami</label>
+            <label class="js-label" for="friend-name">Mail / Nom du club de ton ami</label>
             <input class="input js-input" type="text" name="friend-name">
           </div>
           <div class="js-en-y"></div>

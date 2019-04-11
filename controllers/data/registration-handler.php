@@ -16,8 +16,8 @@ if(!empty($_POST) && isset($_POST['register_submit']))
   $last_name = trim($_POST['last_name']);
   $team_name = trim($_POST['team_name']);
   $mail = trim($_POST['mail']);
-  $password = $_POST['password'];
-  $password_confirmation = $_POST['password_confirmation'];
+  $password = sha1($_POST['password']);
+  $password_confirmation = sha1($_POST['password_confirmation']);
 
   // Handle errors 
   if(empty($first_name))
@@ -94,7 +94,7 @@ if (!empty($_POST) && isset($_POST['connexion_submit'])) {
 
   // Get variable
   $connexion_mail = trim($_POST['connexion_mail']);
-  $connexion_password = $_POST['connexion_password'];
+  $connexion_password = sha1($_POST['connexion_password']);
 
   // Handle errors 
   if(empty($connexion_mail))

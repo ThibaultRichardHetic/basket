@@ -32,18 +32,18 @@ class League
 
     let newLabel = document.createElement('label')
     newLabel.className = 'js-label'
-    newLabel.innerHtml = 'Mail / Pseudo de ton ami'
     newLabel.setAttribute('for', 'friend-name') 
     newField.appendChild(newLabel)
 
     let newInput = document.createElement('input')
     newInput.className = 'input js-input'
     newInput.setAttribute('name', 'friend-name') 
+    newInput.setAttribute('placeholder', 'Mail / Nom du club de ton ami') 
     newInput.setAttribute('type', 'text') 
     newField.appendChild(newInput)
 
     document.querySelector('.js-en-y').appendChild(newField)
-
+ 
   }
 } 
 
