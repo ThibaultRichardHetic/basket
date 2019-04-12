@@ -544,9 +544,11 @@
         .body .main--club .section--2 .nav .link {
           text-decoration: underline; }
     .body .main--club .section--3 {
+      padding-top: 100px;
       min-height: 150vh;
       position: relative; }
       .body .main--club .section--3 .container--team {
+        margin-top: 100px;
         background-color: #fff;
         width: 90%;
         margin: auto;
@@ -558,10 +560,8 @@
           text-align: center; }
         .body .main--club .section--3 .container--team .container--players {
           display: flex;
-          justify-content: space-between;
-          border: red 1px solid; }
+          justify-content: space-between; }
           .body .main--club .section--3 .container--team .container--players .player {
-            border: green solid 1px;
             display: flex;
             flex-direction: column;
             align-items: center;
