@@ -50,7 +50,6 @@ while (1 == 1) {
           $GLOBALS['player_3'] = $resp->cumulativeplayerstats->playerstatsentry[$index_3];
           $GLOBALS['player_4'] = $resp->cumulativeplayerstats->playerstatsentry[$index_4];
           $GLOBALS['player_5'] = $resp->cumulativeplayerstats->playerstatsentry[$index_5];
-
           break;
         }
       }
@@ -82,9 +81,6 @@ if (!empty($GLOBALS['player_1'])) {
 
   $maxId = 'max(id)';
 
-  echo '<pre>';
-  print_r($resp->$maxId);
-  echo '</pre>';
   $player_id = $resp->$maxId;
 
   $prepare = $pdo->prepare('UPDATE league_users SET id_player = :player WHERE ((id_user = :user) && (id_league = :league))');
@@ -92,14 +88,6 @@ if (!empty($GLOBALS['player_1'])) {
   $prepare->bindValue('user', $_SESSION['id']);
   $prepare->bindValue('player', $player_id);
   $prepare->execute();
-
-  echo '<pre>';
-  print_r($leagueId);
-  echo '</pre>';
-
-  echo '<pre>';
-  print_r($_SESSION['id']);
-  echo '</pre>';
 
 
 }

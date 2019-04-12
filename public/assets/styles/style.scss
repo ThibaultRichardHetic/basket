@@ -748,21 +748,104 @@
   }
   .main--club
   {
+    background-color: #f4f4f4;
     .section--1
     {
       height: 30vh;
       background-image: url(../images/club.png);
       display: flex;
-      justify-content: center;
       align-items: center;
-      margin-bottom: 100px;
       .container
+      { 
+        width: 60%;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        .container--profile
+        {
+          .container--img
+          {
+            width: 120px;
+            height: 120px;
+            background-color: #fff;
+            border-radius: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .profile__img
+            {
+              width: 90px;
+              height: 90px;
+            }
+          }
+          .name
+          {
+            font-family: var(--typo-current);
+            font-size: var(--font-size-3);
+            color: var(--color-text-2);
+          }
+        }
+        .container--date
+        {
+          position: absolute;
+          font-family: var(--typo-title);
+          font-size: var(--font-size-2);
+          color: var(--color-text-2);
+          text-align: center;
+          width: 40%;
+          left: 30%;
+          top: 20%;
+        }
+      }
+    }
+    .section--2
+    {
+      background-color: #fff;
+      .nav
       {
+        width: 30%;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        a
+        {
+          font-family: var(--typo-current);
+          font-size: var(--font-size-3);
+          color: var(--color-primary);
+        }
+        .link
+        {
+          text-decoration: underline;
+        }
+      }
+    }
+    .section--3
+    {
+      min-height: 150vh;
+      position: relative;
+      .container--img
+      {
+        position: absolute;
+        width: 50%;
+        left: 25%;
+        background-image: url(../images/parket.png);
+        height: 60vh;
+        background-position: center;
+        background-size: 100%;
+        background-repeat: no-repeat;
+      }
+      .container--team
+      {
+        background-color: #fff;
+        width: 90%;
+        margin: auto;
+        height: 50vh;
         .title
         {
-          font-size: var(--font-size-1);
-          color: var(--color-text-2);
           font-family: var(--typo-title);
+          font-size: var(--font-size-3);
+          color: var(--color-primary);
+          text-align: center;
         }
       }
     }

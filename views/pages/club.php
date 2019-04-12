@@ -14,47 +14,65 @@
 
   $isPossible = $prepare->fetch()->id_player;
 
-  echo '<pre>';
-  print_r($isPossible);
-  echo '</pre>';
-
-  echo '<pre>';
-  print_r($leagueId);
-  echo '</pre>';
-
-  echo '<pre>';
-  print_r($_SESSION['id']);
-  echo '</pre>';
-
   if ($isPossible == 0) {
     include '../controllers/data/new-team.php'; 
   }
 ?>
 
+<?php 
+  $prepare = $pdo->prepare('SELECT id_user FROM league_users WHERE id_league = :league');
+  $prepare->bindValue('league', $leagueId);
+  $prepare->execute();
+
+  $users = $prepare->fetchAll();
+
+  foreach ($users as $_user) {
+    if ($_user->id_user != $_SESSION['id']) {
+      $GLOBALS['id_vs'] = $_user->id_user;
+      break;
+    }
+  }
+$prepare = $pdo->prepare('SELECT first_name FROM users WHERE id = :id ');
+$prepare->bindValue('id', $GLOBALS['id_vs']);
+$prepare->execute();
+$userNameVs = ucfirst($prepare->fetch()->first_name);
+$urlAvatarVs = 'https://avatars.dicebear.com/v2/male/:'.$GLOBALS['id_vs'].'.svg'
+?>
 
   <main class="main--club">
     <section class="section--1">
       <div class="container">
         <div class="container--profile">
-
+          <div class="container--img">
+            <img class="profile__img" src="<?= $urlAvatar ?>" alt="">
+          </div>
+          <h4 class="name"><?= $userName ?></h4>
         </div>
         <div class="container--date">
-
+          <h3 class="title">Prochain match</h3>
         </div>
         <div class="container--profile">
-
+          <div class="container--img">
+            <img class="profile__img" src="<?= $urlAvatarVs ?>" alt="">
+          </div>
+          <h4 class="name"><?= $userNameVs ?></h4>
         </div>
       </div>
     </section>
     <section class="section--2">
-      <nav>
+      <nav class="nav">
         <a href="<?= URL ?>classement">Classement</a>
-        <a href="">Club</a>
+        <a class="link" href="">Club</a>
       </nav>
     </section>
     <section class="section--3">
+      <!-- <div class="container--img">
+      </div> -->
       <div class="container--team">
-
+        <h4 class="title">Ton équipe</h4>
+        <div class="container--players">
+          lfe,fel
+        </div>
       </div>
     </section>
   </main>
