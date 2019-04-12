@@ -7,12 +7,11 @@
     </div>
   </section>
   <section class="section--2">
-      <div class="container">
-          <p class="text">Classement</p>
-          <div class="space"></div>
-          <p class="text">Club</p>
-      </div>
-  </section>
+      <nav class="nav">
+        <a class="link" href="">Classement</a>
+        <a href="<?= URL ?>tableau">Club</a>
+      </nav>
+    </section>
 
 <h4 class="title--ranking">Récapitulatif des scores</h4>
 <section class="section--3">

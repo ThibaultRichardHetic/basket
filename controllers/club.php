@@ -1,6 +1,6 @@
 <?php
 
-$title = $_SESSION['title'];
+$title = 'Club';
 
 
 include '../views/pages/club.php';

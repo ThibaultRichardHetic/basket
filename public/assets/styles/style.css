@@ -251,18 +251,18 @@
         color: var(--color-text-2);
         font-family: var(--typo-title); }
     .body .main--ranking .section--2 {
-      height: 6vh;
-      width: 100%;
-      background-color: white;
-      box-shadow: 1px 4px 20px 1px rgba(0, 0, 0, 0.2); }
-      .body .main--ranking .section--2 .container {
-        height: 100%;
+      background-color: #fff; }
+      .body .main--ranking .section--2 .nav {
+        width: 30%;
+        margin: auto;
         display: flex;
-        justify-content: center;
-        align-items: center; }
-      .body .main--ranking .section--2 .space {
-        width: 8vh;
-        height: 100%; }
+        justify-content: space-between; }
+        .body .main--ranking .section--2 .nav a {
+          font-family: var(--typo-current);
+          font-size: var(--font-size-3);
+          color: var(--color-primary); }
+        .body .main--ranking .section--2 .nav .link {
+          text-decoration: underline; }
     .body .main--ranking .section--3 {
       position: relative;
       width: 80%;

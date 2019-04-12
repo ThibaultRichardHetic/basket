@@ -1,5 +1,5 @@
 <?php
 
-$title = 'My Website';
+$title = 'Alley Oop';
 
 include '../views/pages/home.php';

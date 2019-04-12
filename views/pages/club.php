@@ -74,10 +74,15 @@ function callImg($name){
 
   // Close request to clear up some resources
   curl_close($ch);
+
   $img = $resp->activeplayers->playerentry[0]->player->officialImageSrc;
+  $teamName = $resp->activeplayers->playerentry[0]->team->Name;
   return $img;
+
 }
 ?>
+
+
 
   <main class="main--club">
     <section class="section--1">
@@ -169,11 +174,6 @@ function callImg($name){
           $prepare->bindValue('user', $GLOBALS['id_vs']);
           $prepare->execute();
           $id_player = $prepare->fetch()->id_player;
-
-          echo '<pre>';
-          print_r($id_player);
-          echo '</pre>';
-
 
           $prepare = $pdo->prepare('SELECT player_1, player_2, player_3, player_4, player_5 FROM players WHERE id = :id');
           $prepare->bindValue('id', $id_player);
