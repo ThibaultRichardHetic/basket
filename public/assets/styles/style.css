@@ -546,15 +546,6 @@
     .body .main--club .section--3 {
       min-height: 150vh;
       position: relative; }
-      .body .main--club .section--3 .container--img {
-        position: absolute;
-        width: 50%;
-        left: 25%;
-        background-image: url(../images/parket.png);
-        height: 60vh;
-        background-position: center;
-        background-size: 100%;
-        background-repeat: no-repeat; }
       .body .main--club .section--3 .container--team {
         background-color: #fff;
         width: 90%;
@@ -565,5 +556,22 @@
           font-size: var(--font-size-3);
           color: var(--color-primary);
           text-align: center; }
+        .body .main--club .section--3 .container--team .container--players {
+          display: flex;
+          justify-content: space-between;
+          border: red 1px solid; }
+          .body .main--club .section--3 .container--team .container--players .player {
+            border: green solid 1px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 20%;
+            height: 30vh;
+            position: relative; }
+            .body .main--club .section--3 .container--team .container--players .player .name {
+              font-size: var(--font-size-4);
+              font-family: var(--typo-current); }
+            .body .main--club .section--3 .container--team .container--players .player .container--img img {
+              width: 100%; }
 
 /*# sourceMappingURL=style.css.map */
