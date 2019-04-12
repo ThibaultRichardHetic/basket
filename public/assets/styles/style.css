@@ -135,14 +135,6 @@
   *
   ** page connexion sart
   *
-  */
-  /*
-  *
-  ** page ranking
-  *
-  */
-  /*
-  ** page de league start
   */ }
   .body .main--home .section--1 {
     height: 90vh;
@@ -330,7 +322,7 @@
         font-family: var(--typo-current);
         line-height: calc(1.2 * var(--font-size-3)); }
       .body .main--ranking .section--3 .dunk {
-        width: 50%;
+        width: 30vw;
         height: 60vh; }
   .body .main--league {
     margin-bottom: 100px; }
@@ -480,5 +472,38 @@
                   font-size: var(--font-size-1);
                   font-family: var(--typo-current);
                   text-align: center; }
+  .body .error-text {
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .body .error-text h2 {
+      margin-top: 10vh;
+      font-size: 60px;
+      color: var(--color-primary);
+      font-family: var(--typo-title); }
+    .body .error-text p {
+      margin-top: 2vh;
+      font-size: var(--font-size-3);
+      color: var(--color-text);
+      font-family: var(--typo-current); }
+  .body .main--404 {
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+  .body .main--club .section--1 {
+    height: 30vh;
+    background-image: url(../images/club.png);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 100px; }
+    .body .main--club .section--1 .container .title {
+      font-size: var(--font-size-1);
+      color: var(--color-text-2);
+      font-family: var(--typo-title); }
 
 /*# sourceMappingURL=style.css.map */

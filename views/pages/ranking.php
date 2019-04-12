@@ -53,7 +53,7 @@
             <td class="col-loose">10</td>
         </tr>
     </table>
-    <img src="/basket/public/assets/images/dunk.png" alt="">
+    <img class="dunk" src="<?= URL ?>/assets/images/dunk.png" alt="">
 </section>
 </main>
 <?php include '../views/partials/footer.php' ?>
