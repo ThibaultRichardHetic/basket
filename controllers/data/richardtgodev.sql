@@ -1,17 +1,25 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.7
+-- version 4.7.3
 -- https://www.phpmyadmin.net/
 --
--- Hôte : localhost:8889
--- Généré le :  ven. 12 avr. 2019 à 03:02
--- Version du serveur :  5.6.38
--- Version de PHP :  7.2.1
+-- Hôte : richardtgodev.mysql.db
+-- Généré le :  ven. 12 avr. 2019 à 12:31
+-- Version du serveur :  5.6.43-log
+-- Version de PHP :  7.0.33
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
 SET time_zone = "+00:00";
 
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
 --
--- Base de données :  `basket-login`
+-- Base de données :  `richardtgodev`
 --
 
 -- --------------------------------------------------------
@@ -62,11 +70,8 @@ CREATE TABLE `league_users` (
 
 INSERT INTO `league_users` (`id`, `id_league`, `id_user`, `id_player`) VALUES
 (1, 2, 1, 4),
-(2, 2, 3, 0),
-(3, 2, 5, 0),
-(4, 1, 9, 0),
-(5, 2, 9, 0),
-(6, 3, 9, 0),
+(2, 2, 3, 12),
+(5, 2, 9, 13),
 (7, 8, 8, 3),
 (8, 9, 8, 14),
 (9, 9, 1, 2),
@@ -74,12 +79,10 @@ INSERT INTO `league_users` (`id`, `id_league`, `id_user`, `id_player`) VALUES
 (11, 10, 1, 10),
 (12, 10, 7, 7),
 (13, 10, 9, 11),
-(14, 11, 8, 0),
-(15, 11, 1, 0),
+(15, 11, 1, 8),
 (16, 11, 7, 5),
 (17, 11, 9, 6),
-(18, 12, 8, 0),
-(19, 12, 7, 0);
+(18, 12, 8, 9);
 
 -- --------------------------------------------------------
 
@@ -143,13 +146,14 @@ CREATE TABLE `users` (
 INSERT INTO `users` (`id`, `first_name`, `last_name`, `team_name`, `mail`, `password`) VALUES
 (1, 'thibault', 'richard', 'les copains', 'thibault.richard2000@gmail.com', 'deb1cbc23ac02175e884e57b45c6d1b2b45c69b4'),
 (2, 'jack', 'dutron', 'koolteam', 'jack@gmail.com', '16218158d89eeef848468f96c894a07a8e68bf3e'),
-(3, 'thibault', 'richard', 'lespotes', 'thibault.rez@gmail.com', '58ad983135fe15c5a8e2e15fb5b501aedcf70dc2'),
-(4, 'Thibault', 'Richard', 'Thibault Richard', 'richard.thibault.contact@gmail.com', '2882f38e575101ba615f725af5e59bf2333a9a68'),
-(5, 'Manoun', 'Bouet', 'Proutsipou', 'manon.buee@hetic.net', 'cb09f9608c5358f739ff494e8470ea753ea8e2f9'),
-(6, 'é&é\"', 'ded', 'jiij', 'dede@gmail.com', '94d53fbe11fa48a71877301d104e2b0409ba9822'),
+(3, 'asap', 'richard', 'lespotes', 'thibault.rez@gmail.com', '58ad983135fe15c5a8e2e15fb5b501aedcf70dc2'),
+(4, 'franck', 'Richard', 'Thibault Richard', 'richard.thibault.contact@gmail.com', '2882f38e575101ba615f725af5e59bf2333a9a68'),
+(5, 'manoun', 'Bouet', 'Proutsipou', 'manon.buee@hetic.net', 'cb09f9608c5358f739ff494e8470ea753ea8e2f9'),
+(6, 'michel', 'ded', 'jiij', 'dede@gmail.com', '94d53fbe11fa48a71877301d104e2b0409ba9822'),
 (7, 'axel', 'lekiki', 'salam', 'axelair@gmail.com', '36a04308cc3a99ceac9af29560063fd460d9e7fa'),
-(8, 'thibaut', 'nom', 'laTeam', 'hetic@gmail.com', '70f34365df9225720dbc6a9f31db50c48870ded3'),
-(9, 'moutarde', 'colonel', 'jajaja', 'jaja@gmail.com', 'd608ee3392c8101837a243df7f38180b198c334c');
+(8, 'maxime', 'nom', 'laTeam', 'hetic@gmail.com', '70f34365df9225720dbc6a9f31db50c48870ded3'),
+(9, 'moutarde', 'colonel', 'jajaja', 'jaja@gmail.com', 'd608ee3392c8101837a243df7f38180b198c334c'),
+(10, 'sacah', 'fzljfze', 'zefkjfe', 'sacha.tourtoulou@hetic.net', 'da39a3ee5e6b4b0d3255bfef95601890afd80709');
 
 --
 -- Index pour les tables déchargées
@@ -188,21 +192,22 @@ ALTER TABLE `users`
 --
 ALTER TABLE `leagues`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
-
 --
 -- AUTO_INCREMENT pour la table `league_users`
 --
 ALTER TABLE `league_users`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
-
 --
 -- AUTO_INCREMENT pour la table `players`
 --
 ALTER TABLE `players`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
-
 --
 -- AUTO_INCREMENT pour la table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
